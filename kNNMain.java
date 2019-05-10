@@ -16,7 +16,7 @@ public class kNNMain{
 
 
     List<DataPoint> ans = DataSet.readDataSet(PATH_TO_DATA);
-    DataPoint flower = ans.get(32);
+    DataPoint flower = ans.get(3);
     System.out.println(flower.getLabel());
 
     String printableX = Arrays.toString (flower.getX());
@@ -24,7 +24,8 @@ public class kNNMain{
 
 
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
-
+     List <DataPoint> testSet = DataPoint.getTestSet(ans, 0.3);
+     List <DataPoint> trainingSet = DataPoint.getTrainingSet (ans, 0.7);
 
     // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
 
