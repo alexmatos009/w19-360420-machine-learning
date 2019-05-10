@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import javax.swing.*;
+import java.lang.Math;
 
 /**
   Dataset class Author: S. Bhatnagar
@@ -248,8 +249,24 @@ public class DataSet {
   ////////////////////////////////////////////////////////////////////////////
 
   ////////////////////////////////////////////////////////////////////////////
-  // TASK 4: make a method here called distanceEuclid 
+  // TASK 4: make a method here called distanceEuclid
+  public static double GetDistance(DataPoint point1, DataPoint point2)
+   {
+     double [] arraypoint1 = point1.getX();
+     double [] arraypoint2 = point2.getX();
+     double distance = 0;
+  for (int i=0; i< arraypoint1.length; i++)
+    {
+      double difference = arraypoint2[i] - arraypoint1[i];
+      double differencepower = Math.pow(difference, 2.0);
+      double distancetot =+ differencepower;
+      distance = distancetot;
+    }
 
+  double finald = Math.sqrt(distance);
+  return finald;
+  }
+  /////////////////////////////////////////
   ////////////////////////////////////////////////////////////////////////////
 
 

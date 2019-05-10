@@ -24,11 +24,14 @@ public class kNNMain{
 
 
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
-     List <DataPoint> testSet = DataPoint.getTestSet(ans, 0.3);
-     List <DataPoint> trainingSet = DataPoint.getTrainingSet (ans, 0.7);
+     List<DataPoint> testSet = DataPoint.gettestSet(ans, 0.3);
+     List<DataPoint> trainingSet = DataPoint.getTrainingSet(ans, 0.7);
 
     // TASK 3: Use the DataSet class methods to plot the 2D data (binary and multi-class)
-
+    DataPoint dpoint1 = flower.get(30);
+    DataPoint dpoint2 = flower.get(23);
+    Getdistance (dpoint1, dpoint2);
+    System.out.println(Getdistance);
 
 
     // TASK 4: write a new method in DataSet.java which takes as arguments to DataPoint objects,
