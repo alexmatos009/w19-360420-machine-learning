@@ -11,6 +11,16 @@ public class kNNMain{
     // TASK 1: Use command line arguments to point DataSet.readDataSet method to
     // the desired file. Choose a given DataPoint, and print its features and label
 
+    String PATH_TO_DATA= args[0];
+    System.out.println (PATH_TO_DATA);
+
+
+    List<DataPoint> ans = DataSet.readDataSet(PATH_TO_DATA);
+    DataPoint flower = ans.get(32);
+    System.out.println(flower.getLabel());
+
+    String printableX = Arrays.toString (flower.getX());
+    System.out.println (printableX);
 
 
     //TASK 2:Use the DataSet class to split the fullDataSet into Training and Held Out Test Dataset
